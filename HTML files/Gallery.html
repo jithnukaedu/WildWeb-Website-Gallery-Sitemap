@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery Page</title>
+<link rel="stylesheet" href="../Stylesheets/galleryStyles.css">
+<link rel="stylesheet" href="../Stylesheets/MainStyle.css">
+<link rel="stylesheet" href="../Stylesheets/Editor_S4_Styles.css">
+<link rel="stylesheet" href="../Stylesheets/tem.css">
+<link rel="stylesheet" href="../Stylesheets/footer.css">
+</head>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;}
+
+  .navbar { 
+    background-color: #90d34e; 
+    overflow: hidden; }
+
+  .navbar a { 
+    float: left; 
+    display: block; 
+    color: white; 
+    text-align: center; 
+    padding: 14px 20px; 
+    text-decoration: none; }
+
+  .navbar a:hover, .navbar .active { 
+    background-color: #ddd; 
+    color: black; }
+
+  .main-content { padding: 16px; }
+
+  .logo { height: 20px; }
+
+  .mission { margin: 20px 0; }
+
+  .popup { 
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+  }
+
+  .popup-content { 
+    margin: 15% auto; 
+    padding: 20px; 
+    width: 80%; 
+    max-width: 600px; 
+    background-color: #fefefe; 
+    position: relative; 
+    border-radius: 5px; 
+  }
+
+  .description { 
+    position: absolute; 
+    bottom: 500px; 
+    left: 500px; 
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 5px; 
+    border-radius: 5px; 
+    color: black;
+  }
+
+  .close { 
+    color: #aaa; 
+    position: absolute; 
+    top: 10px; 
+    right: 25px; 
+    font-size: 28px; 
+    font-weight: bold; 
+    cursor: pointer; 
+  }
+
+  .close:hover, .close:focus { 
+    color: black; 
+    text-decoration: none; 
+    cursor: pointer; 
+  }
+
+</style>
+
+<body>
+    <header class="navbar">
+        <a href="Home.html" class="active"><img src="../Images/logo.png" alt="Website Logo" class="logo"></a>
+        <a href="Home.html"> Home</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Shop.html">Shop</a>
+        <a href="Userprofile.html">User Profile</a>
+        <a href="Feedback.html">Feedback</a>
+        <a href="SiteMap1.html">Sitemap</a>
+        <a href="Team.html">Team</a>
+    </header>
+
+    <h1>GALLERY</h1>
+    <h2>Land Ecosystems</h2>
+
+
+<div id="#gallery">
+  <!-- Thumbnail images -->
+
+  <div class="popup" id="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img src="" alt="" id="popup-img" style="max-width: 100%; max-height: 80vh;">
+    <div class="description" id="popup-description"></div>
+  </div>
+
+  <div class="thumbnail" onclick="openPopup('../Images/forest.jpg', 'Forests, the verdant lungs of our planet, are intricate ecosystems bustling with life. They blanket vast expanses of land, from the dense, lush rainforests of the tropics to the majestic, towering conifers of the boreal regions. Within their embrace, a remarkable diversity of flora and fauna thrives, from towering hardwoods to delicate ferns, and from elusive mammals to melodious songbirds. Forests play a pivotal role in maintaining the Earths ecological balance, absorbing carbon dioxide, producing oxygen, and regulating climate patterns. They provide essential habitats for countless species, offer invaluable resources for human communities, and serve as sanctuaries for recreation and contemplation. However, these invaluable ecosystems are increasingly threatened by deforestation, habitat fragmentation, and climate change. Preserving forests is not merely an act of conservation but a vital necessity for the sustenance of life on Earth.')">
+    <img src="../Images/forest.jpg" alt="Forest">
+    <div class="description">
+      <h2 style="font-family: 'Times New Roman', Times, serif;color: aliceblue;">FOREST</h2>
+      <br>
+      <p>Click to view image in gallery mode</p>
+    </div>
+  </div>
+
+  <div class="thumbnail" onclick="openPopup('../Images/snow.jpeg', 'Mountains stand as majestic icons of nature, rising defiantly against the sky and harboring a world of breathtaking beauty and ecological diversity. These towering landforms, shaped by geological forces over millions of years, offer an array of habitats and ecosystems unique to their elevated realms. From the rugged peaks of the Himalayas to the snow-capped summits of the Rockies, mountain environments encompass a diverse range of landscapes, including alpine meadows, dense forests, and icy glaciers. In these high-altitude realms, life perseveres in the face of extreme conditions, with specialized flora and fauna adapted to survive in harsh climates and rugged terrain. Mountain habitats provide vital resources for both wildlife and humans, including freshwater sources, timber, and recreational opportunities such as hiking and skiing. However, these fragile ecosystems are increasingly vulnerable to human impacts, including habitat destruction, climate change, and unsustainable development. Preserving mountain environments is essential not only for conserving biodiversity but also for safeguarding the ecological services they provide to surrounding regions and the global ecosystem as a whole.')">
+    <img src="../Images/snow.jpeg" alt="Mountain">
+    <div class="description">
+      <h2 style="font-family: 'Times New Roman', Times, serif;color: aliceblue;">MOUNTAIN</h2>
+      <br>
+      <p>Click to view image in gallery mode</p>
+    </div>
+  </div>
+
+  <div class="thumbnail" onclick="openPopup('../Images/animals.jpeg', 'The lion, known as the king of the jungle, is an iconic symbol of strength, power, and regal grace. As the second-largest living cat species, lions are renowned for their majestic appearance, with their golden coats and flowing manes adding to their awe-inspiring presence. These apex predators once roamed across vast territories in Africa and parts of Asia, where they live in social groups known as prides. Within prides, lions exhibit complex social structures, with individuals cooperating to hunt prey, defend territory, and raise offspring.')">
+    <img src="../Images/animals.jpeg" alt="lion">
+    <div class="description">
+      <h2 style="font-family: 'Times New Roman', Times, serif;color: aliceblue;">LION</h2>
+      <br>
+      <p>Click to view image in gallery mode</p>
+    </div>
+  </div>
+  
+  <div class="thumbnail" onclick="openPopup('../Images/elephant.jpeg', 'The elephant, revered for its immense size, intelligence, and gentle nature, stands as a symbol of resilience and wonder in the animal kingdom. These majestic creatures, found in diverse habitats across Africa and Asia, captivate the imagination with their iconic features: the elongated trunk, broad ears, and imposing tusks. Elephants are profoundly social beings, forming tight-knit family groups led by experienced matriarchs who guide their herds through the complexities of their environment. Their communication is rich and varied, comprising a symphony of vocalizations, subtle gestures, and infrasound vibrations that convey deep emotions and complex social cues. Despite their formidable stature and intelligence, elephants face myriad threats, including habitat fragmentation, human-wildlife conflict, and poaching for their valuable ivory tusks. Conservation efforts aimed at protecting elephant habitats, mitigating conflicts with human populations, and combating illegal wildlife trade are essential for safeguarding the future of these magnificent animals and preserving their vital role in the ecosystems they inhabit.')">
+    <img src="../Images/elephant.jpeg" alt="elephant">
+    <div class="description">
+      <h2 style="font-family: 'Times New Roman', Times, serif;color: aliceblue;">ELEPHANT</h2>
+      <br>
+      <p>Click to view image in gallery mode</p>
+    </div>
+  </div>
+
+  <div class="thumbnail" onclick="openPopup('../Images/plants.jpeg', 'Plants, the green architects of our planet, form the foundation of terrestrial life, sustaining ecosystems and providing essential resources for all living beings. From towering trees to delicate wildflowers, plants exhibit an astonishing diversity of forms, colors, and adaptations, adapted to thrive in a myriad of environments, from lush rainforests to arid deserts. Through photosynthesis, plants harness the suns energy to convert carbon dioxide into oxygen, playing a vital role in regulating the Earths atmosphere and climate. Beyond their ecological significance, plants provide food, shelter, medicine, and countless other resources essential for human survival and well-being. Moreover, plants contribute to the beauty and tranquility of natural landscapes, inspiring awe and wonder in those who contemplate their intricate beauty. Despite their resilience, plants face threats from habitat destruction, climate change, and invasive species, underscoring the importance of conservation efforts to protect their diversity and ecological contributions for future generations.')">
+    <img src="../Images/plants.jpeg" alt="plants">
+    <div class="description">
+      <h2 style="font-family: 'Times New Roman', Times, serif;color: aliceblue;">PLANTS</h2>
+      <br>
+      <p>Click to view image in gallery mode</p>
+    </div>
+  </div>
+
+  <div class="thumbnail" onclick="openPopup('../Images/flower.jpeg', 'Flowers, the delicate jewels of the plant world, captivate with their beauty, fragrance, and intricate designs. These reproductive structures are found in a staggering array of shapes, sizes, and colors, adorning landscapes from meadows to mountainsides. Through their exquisite blooms, flowers attract pollinators such as bees, butterflies, and birds, facilitating the crucial process of fertilization and seed production. Each flower is a masterpiece of adaptation, finely tuned to its environment and the specific needs of its pollinators. From the enchanting symmetry of a rose to the wild profusion of a field of wildflowers, flowers evoke a sense of wonder and joy, inspiring artists, poets, and lovers alike. Beyond their aesthetic appeal, flowers hold cultural and symbolic significance across diverse societies, representing love, celebration, and the transient beauty of life. Protecting floral diversity is essential not only for preserving the splendor of our natural world but also for ensuring the survival of countless plant and animal species that depend on flowers for their existence.')">
+    <img src="../Images/flower.jpeg" alt="flower">
+    <div class="description">
+      <h2 style="font-family: 'Times New Roman', Times, serif;color: aliceblue;">FLOWERS</h2>
+      <br>
+      <p>Click to view image in gallery mode</p>
+    </div>
+  </div>
+
+  <div class="thumbnail" onclick="openPopup('../Images/hm1.jpg', 'Human garbage, whether its discarded plastic bottles, food wrappers, or electronic waste, poses a grave threat to the environment and public health. Improper disposal of garbage leads to pollution of land, water, and air, with devastating consequences for ecosystems and communities worldwide. Plastic pollution, in particular, has become a global crisis, with plastic debris infiltrating even the most remote environments, from the depths of the ocean to the peaks of mountains. This pollution not only endangers marine life through ingestion and entanglement but also contaminates water sources and threatens human health through the consumption of polluted seafood. Additionally, landfill sites emit greenhouse gases such as methane, contributing to climate change and exacerbating environmental degradation. Addressing the issue of pollution from human garbage requires concerted efforts at various levels, including education, policy interventions, and sustainable waste management practices. By promoting recycling, reducing single-use plastics, and implementing proper waste disposal infrastructure, we can mitigate the impact of garbage pollution and safeguard the health of our planet and its inhabitants.')">
+    <img src="../Images/hm1.jpg" alt="Garbage">
+    <div class="description">
+      <h2 style="font-family: 'Times New Roman', Times, serif;color: aliceblue;">POLLUTION</h2>
+      <br>
+      <p>Click to view image in gallery mode</p>
+    </div>
+  </div>
+
+  <div class="thumbnail" onclick="openPopup('../Images/hm2.jpg', 'Deforestation, the widespread clearance of forests for agricultural, industrial, or urban development purposes, is a critical environmental issue with far-reaching consequences. Forests, vital ecosystems that support biodiversity, regulate climate, and provide essential resources for human communities, are being rapidly degraded and destroyed at an alarming rate. Deforestation leads to the loss of valuable habitat for countless plant and animal species, pushing many to the brink of extinction. Moreover, the removal of trees contributes to climate change by reducing the Earths capacity to absorb carbon dioxide from the atmosphere, thereby exacerbating the greenhouse effect and global warming. Additionally, deforestation disrupts water cycles, increases soil erosion, and diminishes the resilience of ecosystems to natural disasters such as floods and droughts. Addressing deforestation requires comprehensive strategies that promote sustainable land management, conservation practices, and alternative livelihoods for communities dependent on forest resources. By protecting and restoring forests, we can mitigate climate change, preserve biodiversity, and secure the well-being of present and future generations.')">
+    <img src="../Images/hm2.jpg" alt="trees">
+    <div class="description">
+      <h2 style="font-family: 'Times New Roman', Times, serif;color: aliceblue;">DEFORESTATION</h2>
+      <br>
+      <p>Click to view image in gallery mode</p>
+    </div>
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+    <link rel="stylesheet" href="../StyleSheets/footer.css">
+    <div class="footer-content">
+        <h3>WildWeb</h3>
+        <p>Wild Web was created by Group 22 - group 2 members</p>
+        <div><p>Developed and Edited By : <a href="../HTML files/Editor_Jithnuka.html"><button class="editor-details">Jithnuka Athurugiriya</button></a></p></div>
+    </div>
+</footer>
+
+<script>
+  function openPopup(imageSrc, description) {
+    document.getElementById("popup-img").src = imageSrc;
+    document.getElementById("popup-description").innerHTML = description;
+    document.getElementById("popup").style.display = "block";
+  }
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
